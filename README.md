@@ -49,7 +49,7 @@ Number elements in the problem array represent provided values and will have the
 
 Your team would like you to implement a function that verifies if a sudoku solution is correct. The function will take sudoku problem data and sudoku solution data. The function should determine if the solution is complete, incomplete, or invalid. If the solution is invalid, the function should identify which cells are invalid.
 
-There are already unit tests written for this function. Please implement the logic under `./src/sudoku_verifier.js`. The unit tests are found in `./src/sudoku_verifier.spec.js`.
+There are already unit tests written for this function. Please implement the logic under `./src/sudoku_verifier.js`. The unit tests are found in `./spec/sudoku_verifier.spec.js`.
 
 ### Return Value of `sudokuVerifier`
 
