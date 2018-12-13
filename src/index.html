@@ -1,1 +1,29 @@
-<script type="text/javascript" src="/assets/bundle.js"></script>
+<html>
+    <head>
+        <title>Hello, world</title>
+        <script type="text/javascript" src="/assets/bundle.js"></script>
+    </head>
+    <body>
+        <div id="vue-hook">
+            <div class="directions">
+                <h3 class="company">ENDGAME.</h3>
+                <h2 class="play">Let's Play.</h2>
+                <h1 class="game">Sudoku</h1>
+                <p>Hello Applicant! Please implement this sudoku visualizer design. Clicking 'LOAD New' should fetch another sudoku problem from the server and visualize it.</p>
+                <p>When visualizing the sudoku problem and solution, represent user-entered cells with blue text. Represent problem-provided cells with bold gray text. Represent user-entered invalid cells with red text.</p>
+                <p>Please also include this message in your sudoku visualizer.</p>
+                <div> {{ error }} </div> 
+                <div class="button-wrapper">
+                    <button class="load_new" @click="loadNew">Load New</button>
+                </div>
+            </div>
+            <div class="puzzle">
+                <div class="row" v-for="(row, key) in solutionGrid" :key="key">
+                    <div v-for="(item, index) in row" :key="index" :class="item.type" class="item" >
+                        <div :class="{ hidden: item.value === 'N' }" class="item_text">{{ item.value }}</div>
+                    </div>
+                </div>     
+            </div>         
+        </div>
+    </body>
+</html>
