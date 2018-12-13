@@ -57,7 +57,6 @@ describe('When called with the first sudoku problem', function() {
   })
 })
 
-
 describe('When called with the second sudoku problem', function() {
   describe('and a valid solution', function() {
     it('it should have a valid status and an empty invalidIndexes array', function() {
@@ -80,6 +79,9 @@ describe('When called with the second sudoku problem', function() {
       )
     })
   })
+  
+  // NOTE: I believe this test case is wrong. The solution appears to be correct but incomplete. The value at
+  //       character 34 is a non-player number. Meaning it was part of the problem set and cannot be invalid.
   describe('and an invalid incomplete solution', function() {
     it('it should return a status of invalid and an array with invalid cell indexes', function() {
       assertInvalid(
